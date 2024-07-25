@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Imagination</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">ECAP</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="hello"></h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="hello1"></h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="Catagories.html"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+      <a href="Coordinators.html"><i class="fas fa-chalkboard-user"></i><span>Coordinators</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="playlist-details">
+
+   <section class="courses">
+   
+      <div class="box-container">
+   
+         <div class="box">
+            <div class="tutor">
+               <img src="images/imagi-lgo.jpg" alt="">
+               <div class="info">
+                  <h3>Through The Lens</h3>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/imagination-event.jpg" alt="">
+            </div>
+            <h3 class="title " id="course-title">
+               Want to learn photography and cinematography from the basics? Imagination got you covered! Join us for the Basics of Photography & Cinematography workshop.</h3>
+               <h3 class="title " id="course-title">
+                  Venue: LT-19 (Incubation) </h3>
+                  <h3 class="title " id="course-title">
+                  Date: 20 December 2023 </h3>
+                     <h3 class="title " id="course-title">
+                        Time : 6.00pm</h3>
+               <a href="#" id="btnlens" class="inline-btn" onclick="throughTheLens()">view Events and Enroll</a>
+         </div>
+   
+         <div class="box">
+            <div class="tutor">
+               <img src="images/imagi-lgo.jpg" alt="">
+               <div class="info">
+                  <h3>Photography Workshop</h3>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/imagi-event-1.png" alt="">
+            </div>
+            <h3 class="title " id="course-title">Want to learn concepts of photography from the basics? Imagination got you covered! Join us for the Basics of Photography workshop.
+               <br>
+               <br>
+            </h3>
+            <h3 class="title " id="course-title">
+               Venue: LT-19 (Incubation) </h3>
+               <h3 class="title " id="course-title">
+               Date: 20 December 2023 </h3>
+                  <h3 class="title " id="course-title">
+                     Time : 6.00pm</h3>
+            <a href="#" id="btnWork" class="inline-btn" onclick="photoWorkshop()">view Events and Enroll</a>
+         </div>
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/imagi-lgo.jpg" alt="">
+               <div class="info">
+                  <h3>Basic Of Photography</h3>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/imagi-event-2.png" alt="">
+            </div>
+            <h3 class="title " id="course-title">Want to learn photography and cinematography from the basics? Imagination got you covered! Join us for the Basics of Photography & Cinematography workshop.
+               .
+               <br>
+            </h3>
+            <h3 class="title " id="course-title">
+               Venue: To be declared </h3>
+               <h3 class="title " id="course-title">
+               Date: To be declared</h3>
+                  <h3 class="title " id="course-title">
+                     Time : To be declared</h3>
+            <a href="" class="inline-btn">Comming Soon</a>
+         </div>
+   
+         
+        
+   
+      </div>
+   
+   </section>
+   
+
+</section>
+
+
+
+
+
+
+<script src="js/script.js"></script>
+<script>
+   var nameshow = sessionStorage.getItem("nameshow");
+   document.getElementById("hello").textContent = nameshow;
+   document.getElementById("hello1").textContent = nameshow;
+   var userame = sessionStorage.getItem("user");
+   var dataToCheck = userame;
+
+   function checkWorkshop() {
+   const dataRef = database.ref("events/"+ "Photography Workshop" );
+   dataRef.once("value")
+     .then((snapshot) => {
+       // Check if the data exists
+       if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+         console.log(`Data "${dataToCheck}" exists in the database.`);
+         document.getElementById('btnWork').innerHTML = 'Already Registered';
+         document.getElementById('btnWork').onclick = null;
+       } else {
+         console.log(`Data "${dataToCheck}" does not exist in the database.`);
+       }
+     })
+     .catch((error) => {
+       console.error("Error reading data:", error);
+     });
+ }
+
+ function checkLenses() {
+   const dataRef = database.ref("events/"+ "Through The Lenses" );
+   dataRef.once("value")
+     .then((snapshot) => {
+       // Check if the data exists
+       if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+         console.log(`Data "${dataToCheck}" exists in the database.`);
+         document.getElementById('btnlens').innerHTML = 'Already Registered';
+         document.getElementById('btnlens').onclick = null;
+       } else {
+         console.log(`Data "${dataToCheck}" does not exist in the database.`);
+       }
+     })
+     .catch((error) => {
+       console.error("Error reading data:", error);
+     });
+ }
+
+ checkLenses();
+ checkWorkshop();
+</script>
+
+   
+</body>
+</html>

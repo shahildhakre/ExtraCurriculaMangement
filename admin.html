@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra Curricular Activity Pragramm</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/dashbord.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <section class="flex">
+
+            <a href="home.html" class="logo">ECAP</a>
+
+
+            <div class="icons">
+                <div id="menu-btn" class="fas fa-bars"></div>
+                <div id="search-btn" class="fas fa-search"></div>
+                <div id="user-btn" class="fas fa-user"></div>
+                <div id="toggle-btn" class="fas fa-sun"></div>
+            </div>
+
+            <div class="profile">
+                <img src="images/pic-1.jpg" class="image" alt="">
+                <h3 class="name" >LNM Coordinator</h3>
+                <p class="role">Coordinator</p>
+                <div class="flex-btn">
+                    <a href="cordilogin.html" class="option-btn" id="opt-btn-0" onclick="logout()">login</a>
+                </div>
+            </div>
+
+        </section>
+
+    </header>
+
+    <div class="side-bar">
+
+        <div id="close-btn">
+            <i class="fas fa-times"></i>
+        </div>
+
+        <a onclick="logout()" class="btn" style="width: 25rem; margin-left: 2rem; margin-top: 35rem; ">Log Out</a>
+
+    </div>
+
+    <div class="textdiv">
+        <div class="inputboxs">
+            <textarea type="text" id="messageInput" placeholder="Type your message"></textarea>
+        </div>
+        <button onclick="sendMessage('usernames');" id="sendms" class="btn">Send
+            Message</button>
+        <ul id="messageList"></ul>
+
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/firebaseAuth.js"></script>
+    </script>
+</body>
+
+</html>

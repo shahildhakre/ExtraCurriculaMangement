@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Basketball</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">ECAP</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="hello"></h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="hello1"></h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="Catagories.html"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+      <a href="Coordinators.html"><i class="fas fa-chalkboard-user"></i><span>Coordinators</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="playlist-details">
+
+
+   <section class="courses">
+
+   
+      <div class="box-container">
+   
+         <div class="box">
+            <div class="tutor">
+               <img src="images/crick-lg.png" alt="">
+               <div class="info">
+                  <h3>Cricket</h3>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/cricket-ev.png" alt="">
+            </div>
+            <h3 class="title " id="course-title">
+               Improving your speaking skills involves regular practice, focusing on clear pronunciation, using a varied vocabulary, and honing your ability to convey ideas effectively, all of which will boost your confidence.</h3>
+            <a href="cricket.html" class="inline-btn">view Events and Enroll</a>
+         </div>
+   
+         <div class="box">
+            <div class="tutor">
+               <img src="images/bask-lg.png" alt="">
+               <div class="info">
+                  <h3>Basketball</h3>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/basket-ev.png" alt="">
+            </div>
+            <h3 class="title " id="course-title">Participating in sports not only promotes physical fitness but also builds teamwork, discipline, and resilience, fostering a well-rounded and healthy lifestyle.
+               <br>
+            </h3>
+            <a href="basketball.html" class="inline-btn">view Events and Enroll</a>
+         </div>
+   
+         
+        
+   
+      </div>
+   
+   </section>
+   
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<script src="js/script.js"></script>
+<script>
+   var nameshow = sessionStorage.getItem("nameshow");
+   document.getElementById("hello").textContent = nameshow;
+   document.getElementById("hello1").textContent = nameshow;
+</script>
+
+   
+</body>
+</html>

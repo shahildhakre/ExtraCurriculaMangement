@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Extra Curricular Activity Pragramm</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+
+</head>
+
+<body>
+
+   <header class="header">
+
+      <section class="flex">
+
+         <a href="home.html" class="logo">ECAP</a>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name" id="hello"></h3>
+            <p class="role">student</p>
+            <a href="profile.html" class="btn">view profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn" id="opt-btn-0">login</a>
+            </div>
+         </div>
+
+      </section>
+
+   </header>
+
+   <div class="side-bar">
+
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="hello1"></h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+      </div>
+
+      <nav class="navbar">
+         <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+         <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+         <a href="Catagories.html"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+         <a href="Coordinators.html"><i class="fas fa-chalkboard-user"></i><span>Coordinators</span></a>
+         <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+      </nav>
+
+   </div>
+
+
+
+   <section class="courses">
+
+      <h1 class="heading">Quick Registration : Some Popular Events</h1>
+
+      <div class="box-container">
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/media-cell.jpg" alt="">
+               <div class="info">
+                  <h3>Media Cell</h3>
+                  <span id="Current-Date"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/media-cell-event.jpg" alt="">
+
+            </div>
+            <h3 class="title">Spot Light-Open Mic Event</h3>
+            <a class="inline-btn" id="btnSpot" onclick="registerSpotlight()">Register Now</a>
+         </div>
+
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/cybros_lg.jpg" alt="">
+               <div class="info">
+                  <h3>Cybros</h3>
+                  <span id="Current-Date-1"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/cybros-event.png" alt="">
+
+            </div>
+            <h3 class="title">Duels</h3>
+            <a href="#" class="inline-btn" id="btndule" onclick="Dules()">Register Now</a>
+         </div>
+
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/ecell_lg.jpg" alt="">
+               <div class="info">
+                  <h3>E-Cell</h3>
+                  <span id="Current-Date-2"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/ecell-event.png" alt="">
+
+            </div>
+            <h3 class="title">Shark Tank LNM</h3>
+            <a href="#" class="inline-btn" id="btnshark" onclick="sharkTank()">Register Now</a>
+         </div>
+
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/capriccio_lg.jpg" alt="">
+               <div class="info">
+                  <h3>Capriccio</h3>
+                  <span id="Current-Date-3"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/capricio-event.png" alt="">
+
+            </div>
+            <h3 class="title">Battle Of The Bands</h3>
+            <a class="inline-btn">Comming Soon</a>
+         </div>
+
+
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/insignia_lg.jpg" alt="">
+               <div class="info">
+                  <h3>Insignia</h3>
+                  <span id="Current-Date-4"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/insignia-event.jpg" alt="">
+
+            </div>
+            <h3 class="title">Fusion Frenzy: College Groove Gala</h3>
+            <a class="inline-btn">Comming Soon</a>
+         </div>
+
+         <div class="box">
+            <div class="tutor">
+               <img src="images/imagination_lg.jpg" alt="">
+               <div class="info">
+                  <h3>Imagination</h3>
+                  <span id="Current-Date-5"></span>
+               </div>
+            </div>
+            <div class="thumb">
+               <img src="images/imagination-event.jpg" alt="">
+
+            </div>
+            <h3 class="title">Through The Lens</h3>
+            <a href="#" class="inline-btn" id="btnlens" onclick="throughTheLens()">Register Now</a>
+         </div>
+
+
+
+
+
+
+
+
+
+      </div>
+
+      <div class="more-btn">
+         <a href="Catagories.html" class="inline-option-btn">view all Catagories</a>
+      </div>
+
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <script src="js/script.js"></script>
+   <script>
+      var nameshow = sessionStorage.getItem("nameshow");
+      document.getElementById("hello").textContent = nameshow;
+      document.getElementById("hello1").textContent = nameshow;
+      var userame = sessionStorage.getItem("user");
+      var dataToCheck = userame;
+
+      function checkshark() {
+         const dataRef = database.ref("events/" + "Shark Tank LNM");
+         dataRef.once("value")
+            .then((snapshot) => {
+               // Check if the data exists
+               if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+                  console.log(`Data "${dataToCheck}" exists in the database.`);
+                  document.getElementById('btnshark').innerHTML = 'Already Registered';
+                  document.getElementById('btnshark').onclick = null;
+               } else {
+                  console.log(`Data "${dataToCheck}" does not exist in the database.`);
+               }
+            })
+            .catch((error) => {
+               console.error("Error reading data:", error);
+            });
+      }
+
+      function checkDules() {
+         const dataRef = database.ref("events/" + "Dules");
+         dataRef.once("value")
+            .then((snapshot) => {
+               // Check if the data exists
+               if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+                  console.log(`Data "${dataToCheck}" exists in the database.`);
+                  document.getElementById('btndule').innerHTML = 'Already Registered';
+                  document.getElementById('btndule').onclick = null;
+               } else {
+                  console.log(`Data "${dataToCheck}" does not exist in the database.`);
+               }
+            })
+            .catch((error) => {
+               console.error("Error reading data:", error);
+            });
+      }
+
+      function checkLenses() {
+         const dataRef = database.ref("events/" + "Through The Lenses");
+         dataRef.once("value")
+            .then((snapshot) => {
+               // Check if the data exists
+               if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+                  console.log(`Data "${dataToCheck}" exists in the database.`);
+                  document.getElementById('btnlens').innerHTML = 'Already Registered';
+                  document.getElementById('btnlens').onclick = null;
+               } else {
+                  console.log(`Data "${dataToCheck}" does not exist in the database.`);
+               }
+            })
+            .catch((error) => {
+               console.error("Error reading data:", error);
+            });
+      }
+
+      function checkspotlight() {
+         const dataRef = database.ref("events/" + "spotlight");
+         dataRef.once("value")
+            .then((snapshot) => {
+               // Check if the data exists
+               if (snapshot.val() && snapshot.val().hasOwnProperty(dataToCheck)) {
+                  console.log(`Data "${dataToCheck}" exists in the database.`);
+                  document.getElementById('btnSpot').innerHTML = 'Already Registered';
+                  document.getElementById('btnSpot').onclick = null;
+               } else {
+                  console.log(`Data "${dataToCheck}" does not exist in the database.`);
+               }
+            })
+            .catch((error) => {
+               console.error("Error reading data:", error);
+            });
+      }
+
+      checkDules();
+      checkshark();
+      checkLenses();
+      checkspotlight();
+   </script>
+
+
+</body>
+
+</html>

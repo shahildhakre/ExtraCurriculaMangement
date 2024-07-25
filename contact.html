@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>contact us</title>
+
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">ECAP</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="hello"></h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="hello1"></h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="Catagories.html"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+      <a href="Coordinators.html"><i class="fas fa-chalkboard-user"></i><span>Coordinators</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="contact"  >
+
+   <div class="row">
+
+      <div class="image">
+      </div>
+
+      <form onsubmit="checkUsernameInContact() ; reset() ; return false;"  >
+         <h3>get in touch</h3>
+         <input type="text" placeholder="enter your username" name="name" required maxlength="50" class="box" id="conusername">
+         <input type="text" placeholder="enter your Roll No." name="email" required maxlength="50" class="box" id="conroll">
+         <textarea name="msg" id="conbody" class="box" placeholder="enter your message" required maxlength="1000" cols="30" rows="10"></textarea>
+         <input type="submit" value="send message" class="inline-btn" name="submit">
+      </form>
+
+   </div>
+
+   <div class="box-container">
+
+      <div class="box">
+         <i class="fas fa-phone"></i>
+         <h3>phone number</h3>
+         <a href="tel:1234567890">7404685499</a>
+         <a href="tel:1112223333">8392928277</a>
+      </div>
+      
+      <div class="box">
+         <i class="fas fa-envelope"></i>
+         <h3>email address</h3>
+         <a href="">testmail14025@gmail.com</a>
+         <a href="">testmail2@gmail.com</a>
+      </div>
+
+      <div class="box">
+         <i class="fas fa-map-marker-alt"></i>
+         <h3>Collage address</h3>
+         <a href="#">The LNM Institute of Information Technology
+            Rupa ki Nangal, Post-Sumel, Via-Jamdoli
+            Jaipur-302031,</a>
+      </div>
+
+   </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+   var nameshow = sessionStorage.getItem("nameshow");
+   document.getElementById("hello").textContent = nameshow;
+   document.getElementById("hello1").textContent = nameshow;
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+   
+</body>
+</html>

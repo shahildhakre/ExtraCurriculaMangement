@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Catagories</title>
+
+   
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-auth-compat.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database-compat.js"></script>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">ECAP</a>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name" id="hello"></h3>
+         <p class="role">student</p>
+         <a href="profile.html" class="btn">view profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">login</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name" id="hello1"></h3>
+      <p class="role">student</p>
+      <a href="profile.html" class="btn">view profile</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="Catagories.html"><i class="fa-solid fa-layer-group"></i><span>Categories</span></a>
+      <a href="Coordinators.html"><i class="fas fa-chalkboard-user"></i><span>Coordinators</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
+   </nav>
+
+</div>
+
+<section class="courses">
+
+   <h1 class="heading">Club category</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/media-cell.jpg" alt="">
+            <div class="info">
+               <h3>Speaking Skills</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/speaking-skills.jpg" alt="">
+         </div>
+         <h3 class="title " id="course-title">
+            Improving your speaking skills involves regular practice, focusing on clear pronunciation, using a varied vocabulary, and honing your ability to convey ideas effectively, all of which will boost your confidence.</h3>
+         <a href="details-6.html" class="inline-btn">view Clubs</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/sports.jpg" alt="">
+            <div class="info">
+               <h3>Sports</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/sports-pg.jpg" alt="">
+         </div>
+         <h3 class="title " id="course-title">Participating in sports not only promotes physical fitness but also builds teamwork, discipline, and resilience, fostering a well-rounded and healthy lifestyle.
+            <br><br>
+         </h3>
+         <a href="details-1.html" class="inline-btn">view Clubs</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/technology.jpg" alt="">
+            <div class="info">
+               <h3>Technology</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/tech.jpg  " alt="">
+         </div>
+         <h3 class="title " id="course-title">
+            Engaging in coding and technology empowers individuals to shape the future, solve complex problems, and unlock endless possibilities in the digital world.
+            <br><br>
+         </h3>
+            
+         <a href="details-2.html" class="inline-btn">view Clubs</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/aveg.jpg" alt="">
+            <div class="info">
+               <h3>Acting And Drama</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/acting.jpg" alt="">
+         </div>
+         <h3 class="title " id="course-title">Participating in an acting and drama club is a journey of self-expression, empathy, and storytelling, where you can explore different characters and narratives while enhancing your communication and creativity.
+            
+         </h3>
+         <a href="details-3.html" class="inline-btn">view Clubs</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/photography.jpg" alt="">
+            <div class="info">
+               <h3>Photography</h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/photography-lg.jpg" alt="">
+         </div>
+         <h3 class="title " id="course-title">
+            Getting involved in photography allows you to capture the beauty of the world, tell stories through images, and develop an artistic eye, turning everyday moments into lasting memories</h3>
+         <a href="details-4.html" class="inline-btn">view Clubs</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/bussness.jpeg" alt="">
+            <div class="info">
+               <h3>Business </h3>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/chart-busness.jpg" alt="">
+         </div>
+         <h3 class="title " id="course-title">
+            Engaging in business ventures offers the opportunity to innovate, create value, and navigate the dynamic world of commerce, shaping your path towards financial success and professional growth</h3>
+         <a href="details-5.html" class="inline-btn">view Clubs</a>
+      </div>
+
+     
+
+   </div>
+
+</section>
+
+
+
+
+
+<script src="js/script.js"></script>
+<script>
+   var nameshow = sessionStorage.getItem("nameshow");
+   document.getElementById("hello").textContent = nameshow;
+   document.getElementById("hello1").textContent = nameshow;
+</script>
+
+   
+</body>
+</html>
